@@ -7,7 +7,7 @@ public  class  TestRandom {
 		int lim = Integer.parseInt(args[0]);
 		for(int i=0 ; i<lim ; i++)
 		{
-			double randomNum = (int)Math.random();
+			double randomNum = Math.random()*1.0;
             if(randomNum <= 0.5) {
 				countLower++;
 			}
@@ -17,8 +17,8 @@ public  class  TestRandom {
 		}
 		System.out.println("> 0.5: " + countHigher + " times");
 		System.out.println("<= 0.5: " + countLower + " times");
-		    if(countHigher != 0 && countLower != 0){
-			System.out.println("Ratio: " + countHigher / countLower);
+		    if(countLower != 0) {
+			System.out.println("Ratio: " + (countHigher * 1.0 / countLower * 1.0));
 		    }
 	}
 }
