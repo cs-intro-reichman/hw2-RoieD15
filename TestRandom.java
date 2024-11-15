@@ -2,5 +2,23 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+		int countHigher = 0;
+		int countLower = 0;
+		int lim = Integer.parseInt(args[0]);
+		for(int i=0 ; i<lim ; i++)
+		{
+			double randomNum = (int)Math.random();
+            if(randomNum <= 0.5) {
+				countLower++;
+			}
+			else{
+				countHigher++;
+			}
+		}
+		System.out.println("> 0.5: " + countHigher + " times");
+		System.out.println("<= 0.5: " + countLower + " times");
+		    if(countHigher != 0 && countLower != 0){
+			System.out.println("Ratio: " + countHigher / countLower);
+		    }
 	}
 }
