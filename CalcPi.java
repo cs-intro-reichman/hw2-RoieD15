@@ -12,6 +12,8 @@ public class CalcPi {
 				approximatePi = approximatePi + (1.0 / divider * 1.0);
 			}
 			divider = divider + 2;
+			if(i == terms-1)
+			break;
 		}
 		System.out.println("pi, approximated:     " + approximatePi * 4.0);
 	}
