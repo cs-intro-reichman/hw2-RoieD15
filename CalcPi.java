@@ -5,7 +5,7 @@ public class CalcPi {
 		int terms = Integer.parseInt(args[0]);
 		double approximatePi = 1.0;
 		int divider = 3;
-		for(int i = 0; i < terms; i++) {
+		for(int i = 0; i < terms-1; i++) {
 			if(i % 2 == 0) {
 				approximatePi = approximatePi - (1.0 / divider * 1.0);
 			} else {
