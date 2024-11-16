@@ -13,9 +13,9 @@ public class Cheers {
                 }
         System.out.println("What does that spell?");
         for(int m = 0; m < Integer.parseInt(args[1]); m++) {
-                System.out.println(word + "!");
+                System.out.println(word + "!!!");
         }
-            
+
         }
 }
 
