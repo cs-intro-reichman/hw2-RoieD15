@@ -7,12 +7,12 @@ public class CalcPi {
 		int divider = 3;
 		for(int i = 0; i < terms; i++) {
 			if(i % 2 == 0) {
-				approximatePi = approximatePi - 1 / divider;
+				approximatePi = approximatePi * 1.0 - (1.0 / divider * 1.0);
 			} else {
-				approximatePi = approximatePi + 1 / divider;
+				approximatePi = approximatePi * 1.0 + (1.0 / divider * 1.0);
 			}
 			divider = divider + 2;
 		}
-		System.out.println("pi, approximated:     " + approximatePi);
+		System.out.println("pi, approximated:     " + approximatePi * 4.0);
 	}
 }
