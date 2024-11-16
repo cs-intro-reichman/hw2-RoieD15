@@ -3,16 +3,18 @@ public class Cheers {
         public static void main(String[] args) {
 	    String word = args[0].toUpperCase();
             String specialLettes = "AEFHILMNORSX";
-            for(int i = 0 ; i < word.length() ; i++){
+            for(int i = 0 ; i < word.length() ; i++) {
                 char letter = word.charAt(i);
-                for(int j = 0; j < specialLettes.length(); j++) {
-                        if(specialLettes.charAt(j) == letter){
-                                System.out.println("Give me an " + letter + ":" + letter + "!");
-                        } else {
-                                System.out.println("Give me a " + letter + ":" + letter + "!");
-                        }
+                if(specialLettes.indexOf(letter) != -1) {
+                        System.out.println("Give me an " + letter + ": " + letter + "!");
+                } else {
+                        System.out.println("Give me a  " + letter + ": " + letter + "!");
                 }
-                
+                }
+                System.out.println("What does that spell?");
+                for(int m = 0; m < args[1].length(); m++) {
+                        System.out.println(args[0] + "!");
+                }
             }
         }
-}
+
