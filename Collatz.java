@@ -2,8 +2,8 @@
 public class Collatz {
 	public static void main(String args[]) {
 		int top = Integer.parseInt(args[0]);
-		char mode = args[1].charAt(0);
-		if(mode == 'v') {
+		String mode = args[1];
+		if(mode.equals("v")) {
 			for(int i = 1; i < top+1; i++) {
 			System.out.print(i + " ");
 			int seed = i;
