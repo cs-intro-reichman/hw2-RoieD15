@@ -4,16 +4,14 @@ public class CalcPi {
 	    System.out.println("pi according to Java: " + Math.PI);
 		int terms = Integer.parseInt(args[0]);
 		double approximatePi = 1.0;
-		int divider = 3;
+		double divider = 3.0;
 		for(int i = 0; i < terms-1; i++) {
 			if(i % 2 == 0) {
-				approximatePi = approximatePi - (1.0 / divider * 1.0);
+				approximatePi = approximatePi - (1.0 / divider);
 			} else {
-				approximatePi = approximatePi + (1.0 / divider * 1.0);
+				approximatePi = approximatePi + (1.0 / divider);
 			}
 			divider = divider + 2;
-			if(i == terms-1)
-			break;
 		}
 		System.out.println("pi, approximated:     " + approximatePi * 4.0);
 	}
